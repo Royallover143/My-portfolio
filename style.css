@@ -1,0 +1,350 @@
+/* Global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    color: white;
+   
+  }
+  
+  #myVideo {
+    position: fixed;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    min-width: 100%; /* Ensure the video covers the full width */
+    min-height: 100%; /* Ensure the video covers the full height */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    transform: translate(-50%, -50%); /* Center the video */
+    z-index: -1; /* Place the video behind other content */
+}
+  
+  .content {
+      position: relative;
+      z-index: 1; /* Ensure content is above the video */
+      color: white; /* Text color */
+      text-align: center; /* Center the text */
+      padding: 20px; /* Add some padding */
+  
+  }
+  
+  
+  .navbar {
+   background-color: #000c0f65;
+  
+    height: 70px;
+    font-size: 20px;
+    
+  }
+
+  .navbar-brand {
+    font-size: 3rem; /* Adjust the size as needed */
+    color:#00e1ff70;
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
+  }
+
+.navbar-brand:hover {
+    color: #00e1ff70; /* Change this to your desired hover color */
+    text-shadow: 0 0 5px #00c4e0, 0 0 10px #00c4e0; /* Optional: Add a text shadow effect */
+}
+
+
+  .nav-link {
+    color: rgb(8, 199, 212) ;
+    text-decoration: none;
+    transition: color 0.3s ease,text-shadow 0.3s ease ;
+  }
+  
+  .nav-link hover{
+  
+    color: black; /* Change color on hover */
+    text-shadow: 0 0 5px #00c4e0, 0 0 10px #00c4e0;
+  }
+
+  .nav-link:active,
+  .nav-link:focus{
+    color : black;
+    outline: none ;
+  
+  }
+
+
+  .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.678);
+  }
+  
+  h2 {
+    font-size: 3.5rem;
+    color: rgba(255, 255, 255, 0.678);
+  }
+  
+  h3 {
+    font-size: 1.75rem;
+  }
+  
+  .highlight {
+    color: #00e0ff;
+  }
+  
+  p {
+    font-size: 1.1rem;
+  }
+  
+  /* Social Media Icons */
+  .social-icons {
+    margin-bottom: 20px;
+  }
+  
+  .social-icon {
+    margin-right: 15px;
+    color: white;
+    font-size: 1.75rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #00e0ff;
+  }
+  
+  /* Button */
+  .btn-primary {
+    background-color: #00e0ff;
+    border-color: #00e0ff;
+    box-shadow: 0 5px 15px rgba(0, 224, 255, 0.5);
+  }
+  
+  .btn-primary:hover {
+    background-color: #00c4e0;
+    border-color: #00c4e0;
+    box-shadow: 0 5px 25px rgba(0, 224, 255, 0.7);
+  }
+  
+  /* Circle Image */
+  .image-container{
+    position: absolute; /* Position it relative to the nearest positioned ancestor */
+    top: 100px; /* Distance from the top */
+    right: 70px; /* Distance from the right */
+    display: flex; /* Use flexbox to center the content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+  
+  .image-circle {
+    width: 270px;
+    height: 270px;
+    background-color: transparent;
+    border: 6px solid #00e0ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transition: box-shadow 0.3s ease;
+}
+  
+.image-circle:hover {
+  box-shadow: 0 0 25px rgba(0, 224, 255, 0.7); /* Glow effect on hover */
+}
+
+.profile-img {
+  width: 255px;
+  height: 255px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.image-circle:hover .profile-img {
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+  
+  /* Media Query */
+  @media (max-width: 768px) {
+    .hero {
+      text-align: center;
+    }
+  
+    .image-circle {
+      margin-top: 20px;
+      width: 300px;
+      height: 300px;
+    }
+  
+    .profile-img {
+      width: 280px;
+      height: 280px;
+    }
+  }
+
+
+ 
+  /* About Me Section Styles */
+  .about-me {
+    background-color: #1d1d1d; /* Replace with your image path */
+    background-size: cover; /* This will cover the entire section */
+    background-position: center; /* Center the image */
+    padding: 50px 0; /* Adjust padding as necessary */
+    color: white; /* Change text color if needed for contrast */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the glow effect */
+}
+  .about-me:hover {
+    box-shadow: 0 0 20px rgba(0, 224, 255, 0.7); /* Glow effect on hover */
+}
+  .about-me h2 {
+    font-size: 3rem;
+    color: #00e0ff;
+    transition: text-shadow 0.3s ease; /* Smooth transition for the glow effect */
+  }
+  
+  .about-me h2:hover {
+    text-shadow: 0 0 20px rgba(0, 224, 255, 0.7), 0 0 30px rgba(0, 224, 255, 0.5); /* Glow effect on hover */
+}
+  
+  .about-me h3 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-me p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  .highlight {
+    color: #00e0ff;
+  }
+  
+  /* Circle Image */
+  .about-image-container {
+    position: relative
+  
+  }
+  
+  .about-image-circle {
+    width: 270px;
+    height: 270px;
+    background-color: transparent;
+    border: 6px solid #00e0ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .profile-img-a {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .about-image-circle:hover img {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+.about-image-circle:hover {
+    box-shadow: 0 0 20px rgba(0, 224, 255, 0.7); /* Glow effect on hover */
+}
+  
+  /* Button */
+  .btn-primary {
+    background-color: #00e0ff;
+    border-color: #00e0ff;
+    box-shadow: 0 5px 15px rgba(0, 224, 255, 0.5);
+  }
+  
+  .btn-primary:hover {
+    background-color: #00c4e0;
+    border-color: #00c4e0;
+    box-shadow: 0 5px 25px rgba(0, 224, 255, 0.7);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .about-me {
+      text-align: center;
+    }
+  
+    .about-image-circle {
+      margin-bottom: 30px;
+    }
+  }
+
+  
+  /* My Services Section */
+.my-services {
+    background-color: #1d1d1d;
+    color: white;
+  }
+  
+  .my-services h2 {
+    font-size: 3rem;
+    color: white;
+  }
+  
+  .highlight {
+    color: #00e0ff;
+  }
+  
+  .service-card-container {
+    display: flex;
+    justify-content: center; /* Center the cards */
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Space out content evenly */
+    height: 100%; /* Make sure all cards take full height */
+    border: 1px solid #ccc; /* Optional: Add a border for visibility */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    transition: transform 0.3s; /* Optional: Add a hover effect */
+}
+
+.service-card:hover {
+    transform: scale(1.05); /* Optional: Scale up on hover */
+}
+  
+  .service-icon {
+    font-size: 3rem;
+    color: #00e0ff;
+    margin-bottom: 20px;
+  }
+  
+  .service-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .service-description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Button */
+  .btn-primary {
+    background-color: #00e0ff;
+    border-color: #00e0ff;
+    box-shadow: 0 5px 15px rgba(0, 224, 255, 0.5);
+  }
+  
+  .btn-primary:hover {
+    background-color: #00c4e0;
+    border-color: #00c4e0;
+    box-shadow: 0 5px 25px rgba(0, 224, 255, 0.7);
+  }
+  
+  
